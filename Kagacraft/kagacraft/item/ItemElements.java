@@ -17,6 +17,7 @@ public class ItemElements extends Item
 		super(par1);
 		this.setHasSubtypes(true);
 		this.setCreativeTab(Kagacraft.tab);
+		this.setUnlocalizedName("kagacraft.elements");
 		this.func_111206_d("kagacraft:TestTubeE");
 	}
 
@@ -32,6 +33,5 @@ public class ItemElements extends Item
 	{
 		return "Kagacraft.elements_" + Atoms.getSign(par1ItemStack.getItemDamage());
 	}
-	
 	
 }

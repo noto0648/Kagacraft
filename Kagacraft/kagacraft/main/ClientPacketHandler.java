@@ -29,10 +29,8 @@ public class ClientPacketHandler implements IPacketHandler
 		
 		DataInputStream data = new DataInputStream(new ByteArrayInputStream(packet.data));
 
-
 		if(packet.channel.equals("kagacraft"))
 		{
-			System.out.println("jyusin:Client");
 			ByteArrayDataInput var1 = ByteStreams.newDataInput(packet.data);
 			int x, y, z, production, storage;
 			x = var1.readInt();
@@ -54,7 +52,6 @@ public class ClientPacketHandler implements IPacketHandler
 
 	public static Packet sendPacket(TileEntityHydrogen tile)
 	{
-		System.out.println("sousin");
 		ByteArrayOutputStream var1 = new ByteArrayOutputStream(128);
 		DataOutputStream var2 = new DataOutputStream(var1);
 		int x, y, z, production, storage;

@@ -10,6 +10,7 @@ import kagacraft.block.tile.TileEntityElectrolysers;
 import kagacraft.block.tile.TileEntityHydrogen;
 import kagacraft.block.tile.TileEntitySpiritLamp;
 import kagacraft.block.tile.TileEntitySynthesis;
+import kagacraft.client.GuiCheckTool;
 import kagacraft.client.GuiDecomposer;
 import kagacraft.client.GuiElectrolysers;
 import kagacraft.client.GuiHydrogen;
@@ -73,6 +74,10 @@ public class GuiHandler implements IGuiHandler
 		if(ID == 4 && tileEntity instanceof TileEntityHydrogen)
 		{
 			return new GuiHydrogen(player.inventory, (TileEntityHydrogen) tileEntity);
+		}
+		if(ID == 5 )
+		{
+			return new GuiCheckTool(player.getCurrentEquippedItem());
 		}
 		return null;
 	}
